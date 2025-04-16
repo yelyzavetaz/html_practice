@@ -1,0 +1,83 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    box-sizing: border-box;
+    transition: transform 1s;
+    transform-origin: center;
+
+    &__photo {
+        position: relative;
+
+        &-rank {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 10px;
+            top: 84px;
+
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #8B0000;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+        transition: border-radius 1s;
+    }
+
+    &__details {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #2F4F4F;
+    }
+
+    &__extra {
+        opacity: 0;
+        font-size: 18px;
+        font-weight: 400;
+        color: #000;
+        margin: 10.8px;
+    }
+    
+    &:hover {
+        
+        background-color: #EEEEEE;
+        transform: scale(1.2);
+        border-radius: 5px;
+        z-index: 1;
+
+        .person__extra {
+            opacity: 1;
+        }
+        
+        .person__sport::after {
+            content: ',';
+        }
+        .person__pay::before {
+            content: '$';
+        }
+        
+        .person__image {
+            border-radius: 25%;
+        }
+    }
+}
+
+
+

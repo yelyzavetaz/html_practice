@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    box-sizing: border-box;
+    padding-inline: 55px;
+    padding-top: 30px;
+    row-gap: 30px;
+    column-gap: 40px;
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
